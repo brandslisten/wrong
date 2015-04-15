@@ -12,5 +12,5 @@ if defined? IRB
   end
 
   # include it in the top level too, since if you're using Wrong inside IRB that's probably what you want
-  include Wrong
+  # include Wrong # This causes Object to have Wrong as ancestor. This makes Rails autoloading fail if your module is called Helpers since Wrong has such a module too.
 end
